@@ -99,3 +99,10 @@ print(Auto['horsepower'].sum())
 Auto_new = Auto.dropna()
 print(Auto_new.shape)
 
+print(Auto.cylinders.dtype)
+Auto.cylinders = pd.Series(Auto.cylinders, dtype = 'category')
+print(Auto.cylinders.dtype)
+
+fig, ax = subplots(figsize = (8,8))
+Auto.boxplot('mpg', by = 'cylinders', ax=ax)
+
