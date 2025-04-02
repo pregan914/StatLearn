@@ -78,6 +78,9 @@ college.boxplot('Outstate', by = 'Elite', ax = ax)
 # four regions so that four plots can be made simultaneously. By changing the 
 # arguments you can divide the screen up in other combinations. 
 
-#%%
-# h) Continue exploring the data
+fig, axes = plt.subplots(2,2)
+axes[0,0].hist(college['Outstate'])
+axes[0,1].hist(college['Top10perc'])
+axes[1,0].hist(college['Apps'])
+axes[1,1].hist(college['Enroll'])
 
